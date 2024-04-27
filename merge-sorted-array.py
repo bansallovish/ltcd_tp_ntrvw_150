@@ -1,4 +1,3 @@
-
 class Solution(object):
     def merge(self, nums1, m, nums2, n):
         """
@@ -8,14 +7,9 @@ class Solution(object):
         :type n: int
         :rtype: None Do not return anything, modify nums1 in-place instead.
         """
-
-        another_list = []
-        another_list.extend(nums1[0:m])
-        another_list.extend(nums2)
-        print(nums1, m, nums2, n , another_list)
-        global nums1
-        nums1 = sorted(another_list)
-        # return nums1
+        for j in range(n):
+            nums1[m+j] = nums2[j]
+        nums1.sort()
 
 obj1 = Solution()
 # nums1 = [1,2,3,0,0,0]
